@@ -1,0 +1,23 @@
+{{ define "header" }}
+<div class="header">
+	<a href="/ptrn_auth?id={{ .User.AuthID}}" class="logo">Server Go</a>
+	<div class="header-right">
+		<div class="header-button">
+			<div style="padding: 16px 0px">
+			<img  
+					src=".\assets\user_icon.png" 
+					width="16" 
+					height="16"  
+					alt="icon"
+					/>
+			</div>
+		</div>
+		<div class="header-text">
+			{{ .User.Name}} ({{ .User.Age}})
+		</div>
+		<div class="header-button">
+			<a href="/ptrn_signoutRouter?id={{ .User.AuthID}}">Logout</a>
+		</div>
+	</div>
+</div>
+{{ end }}

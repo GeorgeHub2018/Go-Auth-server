@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="main">
+	<br/>
+	<div>Registered users:</div>
+	<ul>
+		{{range .List.Users}}
+		<li>
+		{{.Name}} ({{.Age}}) {{if .AuthID}}(loggedin){{else}}(-){{end}}
+		</li>
+		{{end}} 
+	</ul>
+	
+</div>
+{{ end }}
