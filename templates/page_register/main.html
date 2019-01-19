@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="main">
+	<div style="width: 200px; padding: 15px; 
+		margin-left: calc((100vw - 230px)/2); 
+		margin-top: calc(((100vh - 139px)/2) - 89px);
+		background-color: #f1f1f1;position: absolute;">
+		<form action="/ptrn_registerRouter">
+			<div style="font-weight: bold;">Sign up:</div>
+			{{if .ErrorText}}<div class="error-text"> {{ .ErrorText}} </div>{{end}}
+			<div style="margin-bottom: 5px;">
+				<label for="login">
+					<input name="login" placeholder="login"type="login"/>
+				</label>
+			</div>
+			<div style="margin-bottom: 5px;">
+				<label for="pass">
+					<input name="pass" placeholder="pass" type="password"/>
+				</label>
+			</div>
+			<div style="margin-bottom: 5px;">
+				<label for="name">
+					<input name="name" placeholder="name" type="name"/>
+				</label>
+			</div>
+			<div style="margin-bottom: 5px;">
+				<label for="age">
+					<input name="age" placeholder="age" type="age"/>
+				</label>
+			</div>
+			<div>
+				<input type="submit" value="Sign up"/>
+			</div>
+		</form>
+	</div>
+</div>
+{{ end }}
